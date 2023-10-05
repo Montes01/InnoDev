@@ -9,7 +9,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="es">
 	<head>
-		<meta charset="ASCII" />
+		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -20,3 +20,11 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+</style>
