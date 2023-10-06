@@ -1,0 +1,15 @@
+---
+import { Facts } from "../../Consts/Consts";
+import FactCard from "./Items/FactCard.astro";
+const message =
+  "Nuestra experiencia nos ha permitido desarrollar soluciones tecnológicas en latinoamérica";
+---
+
+<section
+  class="bg-contrast px-5 py-12 gap-12 flex flex-col items-center p5 text-white text-xl max-w-[1000px] w-full"
+>
+  <p class="text-center w-3/5">{message}</p>
+  <section class="flex gap-12 flex-wrap justify-center">
+    {Facts.map((el) => <FactCard value={el.value} fact={el.fact} />)}
+  </section>
+</section>

@@ -6,13 +6,14 @@ type Props = {
 export const Header = ({ children }: Props) => {
   const [isFixed, setIsFixed] = useState(false);
   const StickyButtons = document.getElementById("StickyButtons");
+  const newStyle =
+    " bg-primary fixed pt-[1.3rem] rounded-b-xl border border-[#aaa] pb-[1.3rem] top-0 z-50 border-x-2";
   if (StickyButtons) {
-    StickyButtons.className = isFixed
-      ? StickyButtons.className.concat(" bg-primary ")
-      : StickyButtons.className.replace("bg-primary", "");
-    StickyButtons.style.position = isFixed ? "fixed" : "";
-    StickyButtons.style.padding = isFixed ? "1.3rem" : "";
-    StickyButtons.style.top = isFixed ? "0" : "";
+    if (isFixed) {
+      StickyButtons.className = StickyButtons.className + newStyle;
+    } else {
+      StickyButtons.className = StickyButtons.className.replace(newStyle, "");
+    }
   }
 
   document.addEventListener("scroll", () => {
@@ -23,7 +24,8 @@ export const Header = ({ children }: Props) => {
     }
   });
   return (
-    <header className="max-w-[1000px] z-20 w-full absolute flex flex-col top-0 items-center justify-center gap-3 h-40 p-5 bg-primary">
+    <header 
+    className="max-w-[1000px] border-x border-[#aaa] z-20 w-full relative flex flex-col top-0 items-center justify-center gap-3 h-40 p-5 bg-primary">
       {children}
     </header>
   );

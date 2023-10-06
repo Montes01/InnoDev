@@ -2,23 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import { Header } from "../components/Header/Header.tsx";
 import Main from "../components/Main/Main.astro";
+import Statistics from "../components/Statistics/Statistics.astro"
 import Buttons from "../components/Header/Items/Buttons.astro";
 import Logo from "../components/Header/Items/Logo.astro";
 ---
 
 <Layout title="InnoDev">
-  <section class="bg-primary absolute top-0 h-full flex flex-col items-center">
+  <section
+    class=" min-h-screen bg-white top-0 h-full flex flex-col w-screen items-center "
+  >
     <Header client:only>
-      <section class="text-center flex flex-col">
+      <section class="text-center flex flex-col  w-full">
         <Logo />
       </section>
-      <section
-        id="StickyButtons"
-        class="z-20 flex justify-center gap-2 w-full bg-primary"
-      >
         <Buttons />
-      </section>
     </Header>
     <Main />
+    <Statistics/>
   </section>
 </Layout>

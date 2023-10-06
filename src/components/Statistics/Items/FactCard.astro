@@ -1,0 +1,13 @@
+---
+    interface Props {
+        value: `+${number}` | `+${number}%` | `-${number}` | `-${number}%` , 
+        fact:string
+    }
+    const {value, fact} = Astro.props
+---
+
+
+<section class="flex rounded-xl w-40 h-40 flex-col p-5 items-center justify-between bg-white">   
+    <strong class="text-contrast font-extrabold text-5xl text-center">{value}</strong>
+    <small class="text-md h-3/6 grid place-content-center font-semibold  text-center text-black">{fact}</small>
+</section>

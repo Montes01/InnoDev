@@ -3,13 +3,13 @@ import { services } from "../../../Consts/Consts";
 import ServiceCard from "./SubItems/ServiceCard.astro";
 ---
 
-<section class="bg-white flex flex-col items-center py-9 gap-12">
+<section class=" self-center bg-white flex flex-col items-center py-9 gap-12 box-border">
   <strong class="text-primary text-4xl mx-9 text-center">Empresa encargada del desarrollo de software</strong>
   <p class="mx-9 text-center">Sé parte de nosotros y/o crea tu software con nosotros</p>
   <section class="flex w-full p-5 gap-5 justify-center flex-wrap">
     {
-      services.map(({ title, description }) => {
-        return <ServiceCard text={title} image="/Images/coding.jpg" />;
+      services.map(({ title, description, image }) => {
+        return <ServiceCard text={title} image={image ?? "/Images/macbook.jpg"} />;
       })
     }
   </section>
