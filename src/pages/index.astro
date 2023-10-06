@@ -1,10 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Main from '../components/Main.astro';
+import Layout from "../layouts/Layout.astro";
+import { Header } from "../components/Header/Header.tsx";
+import Main from "../components/Main/Main.astro";
+import Buttons from "../components/Header/Items/Buttons.astro";
+import Logo from "../components/Header/Items/Logo.astro";
 ---
 
 <Layout title="InnoDev">
-    <Header/>
-    <Main/>
+  <section class="bg-primary absolute top-0 h-full flex flex-col items-center">
+    <Header client:only>
+      <section class="text-center flex flex-col">
+        <Logo />
+      </section>
+      <section
+        id="StickyButtons"
+        class="z-20 flex justify-center gap-2 w-full bg-primary"
+      >
+        <Buttons />
+      </section>
+    </Header>
+    <Main />
+  </section>
 </Layout>

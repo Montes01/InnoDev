@@ -1,0 +1,33 @@
+---
+//TODO: Hacer el slider automatico con imagenes posteriormente seteadas
+---
+
+<article class="bg-secondary overflow-hidden h-[20rem] relative">
+  <section id="ScrollSlider" class="flex min-h-full">
+    <img class="min-w-full max-w-full" src="/Images/coding.jpg" alt="" />
+    <img class="min-w-full max-w-full" src="/Images/laptop.jpg" alt="" />
+    <img class="min-w-full max-w-full" src="/Images/macbook.jpg" alt="" />
+    <img class="min-w-full max-w-full" src="/Images/coding.jpg" alt="" />
+  </section>
+  <div
+    class="absolute top-0 left-0 z-10 w-full h-full grid place-content-center backdrop-brightness-[0.3]"
+  >
+    <h2 class="text-white font-bold text-3xl">Texto de ejemplo</h2>
+  </div>
+</article>
+
+<style>
+  #ScrollSlider {
+    & img{
+        object-fit: cover;
+        min-height: 100%;
+        animation: Scroll 55s infinite ;
+    }
+
+  }
+  @keyframes Scroll {
+    to {
+      transform: translateX(-300%);
+    }
+  }
+</style>

@@ -6,13 +6,17 @@ module.exports = {
       backgroundColor: {
         primary: "#eaeaea",
         secondary: "#c6c6c6",
-		blue_parts: "#3b56b5",
-		contrasr: "#3b56b5"
+        blue_parts: "#3b56b5",
+        contrasr: "#3b56b5",
       },
-	  colors: {
-		primary: "#3b56b5",
-		contrast: "#3b56b5"
-	  }
+      colors: {
+        primary: "#3b56b5",
+        contrast: "#3b56b5",
+      },
+      screens: {
+        '500px': '500px',
+        '800px': '800px'
+      }
     },
   },
   plugins: [],

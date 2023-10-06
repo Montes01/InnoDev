@@ -1,0 +1,57 @@
+---
+interface Props {
+  text: string;
+  image: string;
+}
+const { text, image } = Astro.props;
+---
+
+<article id="Card" class="cursor-pointer relative w-full overflow-hidden 500px:w-[45%] 800px:w-[30%]">
+  <img src={image} class="w-full h-full" alt="" />
+  <section
+    class="absolute text-center min-w-full min-h-full text-white grid place-content-center top-0 left-0"
+  >
+    <h2 id="Text" class="z-[2] font-bold text-xl">{text}</h2>
+  </section>
+
+  <div id="BackDrop" class="absolute rounded-[50%] -left-2/4 -bottom-2/4 z-[1] bg-black/50"></div>
+</article>
+
+<style>
+  #Text {
+    display: none;
+  }
+
+  #Card:hover {
+    & #BackDrop {
+      width: 200%;
+      height: 200%;
+      animation: ShowBackDrop .5s ;
+    }
+    & #Text {
+      display: block;
+      animation: ShowSlowly .5s;
+    }
+  }
+
+  @keyframes ShowBackDrop {
+    0% {
+      display: block;
+      width: 0;
+      height: 0;
+    } 
+    100% {
+      width: 200%;
+      height: 200%;
+    }
+  }
+
+  @keyframes ShowSlowly {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
