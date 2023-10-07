@@ -2,22 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import { Header } from "../components/Header/Header.tsx";
 import Main from "../components/Main/Main.astro";
-import Statistics from "../components/Statistics/Statistics.astro"
+import Statistics from "../components/Statistics/Statistics.astro";
 import Buttons from "../components/Header/Items/Buttons.astro";
 import Logo from "../components/Header/Items/Logo.astro";
+import Companies from "../components/Companies/Companies.astro"
+import Footer from "../components/Footer/Footer.astro";
 ---
 
 <Layout title="InnoDev">
   <section
-    class=" min-h-screen bg-white top-0 h-full flex flex-col w-screen items-center "
+    class="min-h-screen bg-white top-0 h-full flex flex-col w-screen items-center"
   >
     <Header client:only>
-      <section class="text-center flex flex-col  w-full">
+      <section class="text-center flex flex-col w-full">
         <Logo />
       </section>
-        <Buttons />
+      <Buttons />
     </Header>
     <Main />
-    <Statistics/>
+    <Statistics />
+    <Companies/>
+    <Footer/>
   </section>
 </Layout>

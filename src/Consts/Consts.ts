@@ -1,4 +1,4 @@
-import type { Fact } from "./Types";
+import type { Fact, Company } from "./Types";
 
 export const services = [
   {
@@ -14,7 +14,7 @@ export const services = [
     image: "/Images/sitio-web.jpg",
   },
   {
-    title: "Loading pages",
+    title: "Landing pages",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
   },
@@ -53,3 +53,22 @@ export const Facts: Fact[] = [
     fact: "Satisfaccion general"
   }
 ];
+
+export const Companies: Company[]  = [
+  {
+    name: "InnoDev"
+  },
+  {
+    name: "Amazon"
+  },
+  {
+    name: "Facebook"
+  }
+  ,
+  {
+    name: "Amazon"
+  },
+  {
+    name: "Facebook"
+  }
+]

@@ -1,0 +1,15 @@
+---
+import { Companies as CompanyList } from "../../Consts/Consts";
+import Company from "./Items/Company.astro";
+---
+
+<section class="max-w-[1000px] bg-primary w-full flex gap-12 flex-col p-12">
+  <h2
+    class="font-bold bg-gradient-to-b from-black to-gray-600 text-center bg-clip-text text-transparent text-3xl [text-shadow:0px_2px_2px_rgba(0,0,255,50%)]"
+  >
+    Empresas que han confiado en nosotros
+  </h2>
+  <section class="flex flex-wrap gap-12 items-center justify-center">
+    {CompanyList.map((el) => <Company name={el.name} image={el.image} />)}
+  </section>
+</section>

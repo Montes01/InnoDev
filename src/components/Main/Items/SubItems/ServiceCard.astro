@@ -6,7 +6,7 @@ interface Props {
 const { text, image } = Astro.props;
 ---
 
-<article id="Card" class="cursor-pointer relative w-full overflow-hidden 500px:w-[45%] 800px:w-[30%]">
+<article id="Card" class="rounded-md cursor-pointer relative w-full overflow-hidden 500px:w-[45%] 800px:w-[30%]">
   <img src={image} class="w-full h-full object-cover" alt="" />
   <section
     class="absolute text-center min-w-full min-h-full text-white grid place-content-center top-0 left-0"

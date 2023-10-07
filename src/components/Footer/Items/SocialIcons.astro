@@ -1,0 +1,68 @@
+---
+
+---
+
+<section
+  id="social"
+  class="w-full flex justify-center items-center gap-5 relative bg-contrast"
+>
+  <section
+    class="w-[50px] h-[50px] hover:bg-blue-700 hover:border p-[0.66rem] rounded-[50%] bg-white"
+  >
+    <img class="w-full" src="/Images/Icons/facebook.png" alt="" />
+  </section>
+  <section
+    class="p-[0.66rem] rounded-[50%] over:border hover:bg-red-400 bg-white w-[50px] h-[50px]"
+  >
+    <img class="w-full" src="/Images/Icons/google-plus.png" alt="" />
+  </section>
+  <section
+    class="hover:bg-gradient-to-r from-[rgba(2,0,36,1)] via-[rgba(121,9,62,1)] to-[rgba(245,255,0,1)] p-2 rounded-[50%] bg-white w-[50px] h-[50px]"
+  >
+    <img class="w-full" src="/Images/Icons/instagram.png" alt="" />
+  </section>
+  <section
+    class="p-2 rounded-[50%] hover:border hover:bg-green-400 bg-white w-[50px] h-[50px]"
+  >
+    <img class="w-full" src="/Images/Icons/whatsapp.png" alt="" />
+  </section>
+</section>
+<style>
+  #social section {
+    transition: transform ease 0.2s;
+    cursor: pointer;
+    z-index: 2;
+    & img {
+      transition: filter ease 0.2s;
+    }
+  }
+
+  #social section:hover {
+    transform: scale(1.12);
+
+    & img {
+      filter: invert(1);
+    }
+  }
+
+  #social::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 30%;
+    background: #fff;
+  }
+  #social::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 30%;
+    background: #fff;
+  }
+</style>
