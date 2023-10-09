@@ -1,0 +1,36 @@
+---
+interface Props {
+  label: string;
+  placeholder: string;
+  name: string;
+  type?: "text" | "number" | "email";
+  isRequired?: boolean;
+}
+const { label, placeholder, name, type, isRequired } = Astro.props;
+---
+
+<section class="flex border p-2 rounded-xl items-center justify-between w-full">
+  <label for={name}>{isRequired?(`${label} *`): label}</label>
+  {
+    isRequired ? (
+      <input
+        type={type ?? "text"}
+        class="px-5 w-5/6 rounded-xl focus:outline-none"
+        id={name}
+        name={name}
+        required
+        placeholder={placeholder}
+        type="text"
+      />
+    ) : (
+      <input
+        type={type ?? "text"}
+        class="px-5 w-5/6 rounded-xl focus:outline-none"
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        type="text"
+      />
+    )
+  }
+</section>

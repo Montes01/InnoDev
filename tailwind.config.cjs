@@ -6,8 +6,7 @@ module.exports = {
       backgroundColor: {
         primary: "#eaeaea",
         secondary: "#c6c6c6",
-        blue_parts: "#3b56b5",
-        contrasr: "#3b56b5",
+        blue_parts: "#00ff00",
       },
       colors: {
         primary: "#3b56b5",
@@ -15,7 +14,10 @@ module.exports = {
       },
       screens: {
         '500px': '500px',
+        '600px': '600px', 
+        '700px': '700px', 
         '800px': '800px', 
+        '900px': '900px', 
         '1500px': '1500px',
         '2000px': '2000px',
       }

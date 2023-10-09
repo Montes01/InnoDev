@@ -1,0 +1,33 @@
+---
+interface Props {
+  selected?: number;
+}
+const { selected } = Astro.props;
+---
+
+<section
+  id="StickyButtons"
+  class="1500px:py-2 flex justify-center max-w-[2000px] 1500px:w-3/6 gap-5 w-full"
+>
+  <button
+    class:list={[
+      " 1500px:py-2 text-sm px-2 max-w-sm font-semibold rounded-3xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      ,
+      selected === 0 ? " text-white bg-contrast hover:bg-white hover:text-contrast" : "bg-white hover:bg-contrast hover:text-white text-primary", 
+    ]}>Nuestros trabajos</button
+  >
+  <button
+    class:list={[
+      " 1500px:py-2 text-sm px-2 max-w-sm font-semibold rounded-3xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      ,
+      selected === 1 ? " text-white bg-contrast hover:bg-white hover:text-contrast" : "bg-white hover:bg-contrast hover:text-white text-primary", 
+    ]}>Contactanos</button
+  >
+  <button
+    class:list={[
+      " 1500px:py-2 text-sm px-2 max-w-sm font-semibold rounded-3xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      ,
+      selected === 2 ? " text-white bg-contrast hover:bg-white hover:text-contrast" : "bg-white hover:bg-contrast hover:text-white text-primary", 
+    ]}>Trabaja con nosotros</button
+  >
+</section>

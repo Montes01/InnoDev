@@ -1,6 +1,7 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,35 +9,43 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans">
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-gradient-to-br from-current">
-		<slot />
-	</body>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans"
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+	<ViewTransitions/>
+  </head>
+  <body class="bg-gradient-to-br from-current">
+    <section
+      class="min-h-screen max-w-[2000px] bg-white top-0 flex flex-col w-screen items-center"
+    >
+      <slot />
+    </section>
+  </body>
 </html>
 
 <style is:global>
-	* {
-		font-family: 'Google Sans',sans-serif;
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+  * {
+    font-family: "Google Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-	body {
-		display: grid;
-		place-content: center;
-	}
+  body {
+    display: grid;
+    place-content: center;
+  }
 
-	::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-	}
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 </style>

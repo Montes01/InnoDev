@@ -1,0 +1,15 @@
+---
+import { Messages } from "../../../../Consts/Consts";
+import Form from "./SubItems/Form.astro";
+interface Props {
+  name: string;
+  description: string;
+}
+const { name } = Astro.props;
+---
+
+<section class="w-1/2 flex items-center gap-16 flex-col">
+  <h2 class="font-extrabold text-primary text-5xl">{name}</h2>
+  <Form />
+  <p class="text-lg mx-12 text-red-600">{Messages.ALERT_CONTACT}</p>
+</section>

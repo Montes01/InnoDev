@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Titles } from "../Consts/Consts";
+import { Header } from "../Sections/General/Header/Header";
+import Buttons from "../Sections/General/Header/Items/Buttons.astro";
+import Logo from "../Sections/General/Header/Items/Logo.astro";
+import Main from "../Sections/WorkPage/Main/Main.astro"
+const { Work } = Astro.params;
+---
+
+<Layout title={Titles.TRABAJOS}>
+  <Header client:only>
+    <Logo />
+    <Buttons />
+  </Header>
+  <Main  name={Work} description={"this is my description"}/>
+</Layout>

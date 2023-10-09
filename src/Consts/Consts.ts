@@ -1,5 +1,9 @@
 import type { Fact, Company } from "./Types";
 
+export const Titles = {
+  PRINCIPAL: "InnoDev - Bienvenido a nuestra compañía",
+  TRABAJOS: "InnoDev - Nuestros trabajos",
+};
 export const services = [
   {
     title: "E-Commerce",
@@ -47,28 +51,32 @@ export const Facts: Fact[] = [
   {
     value: "+130",
     fact: "Clientes activos",
-  }, 
+  },
   {
     value: "+80%",
-    fact: "Satisfaccion general"
-  }
+    fact: "Satisfaccion general",
+  },
 ];
 
-export const Companies: Company[]  = [
+export const Companies: Company[] = [
   {
-    name: "InnoDev"
+    name: "InnoDev",
   },
   {
-    name: "Amazon"
+    name: "Amazon",
   },
   {
-    name: "Facebook"
-  }
-  ,
-  {
-    name: "Amazon"
+    name: "Facebook",
   },
   {
-    name: "Facebook"
-  }
-]
+    name: "Amazon",
+  },
+  {
+    name: "Facebook",
+  },
+];
+
+export const Messages = {
+  ALERT_CONTACT:
+    "La continuación de tu compra y detalles adicionales se gestionarán a través de WhatsApp o Gmail. Estamos aquí para ayudarte.",
+};

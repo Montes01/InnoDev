@@ -1,0 +1,31 @@
+---
+import Input from "../../../../General/Input.astro";
+const areaId = "MyAreaId";
+const textAreaMessage =
+  "Ingrese información esencial sobre la página que desea crear para que podamos mantener su estilo.";
+---
+
+<form action="" class="w-4/6 flex flex-col justify-between gap-12">
+  <Input
+    isRequired={true}
+    label="Nombre"
+    placeholder="Ingresa tu nombre"
+    name="Nombre"
+  />
+  <Input
+    type="number"
+    label="Telefono"
+    placeholder="Ingresa tu telefono"
+    name="telefono"
+  />
+  <section class="flex flex-col gap-4">
+    <label for={areaId}> Informacion</label>
+    <textarea
+      name="Information"
+      id={areaId}
+      placeholder={textAreaMessage}
+      class="p-5 border focus:outline-none max-h-52 rounded-xl"
+      cols="30"
+      rows="10"/>
+  </section>
+</form>

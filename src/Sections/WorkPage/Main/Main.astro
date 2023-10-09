@@ -1,0 +1,21 @@
+---
+import InfoPart from "./Items/InfoPart.astro";
+interface Props {
+  name: string;
+  description: string;
+  principalImage?: `/${string}.${string}`;
+}
+
+const { name, principalImage } = Astro.props;
+---
+
+<main class="flex flex-grow w-full py-12 bg-white justify-between">
+  <InfoPart name={name} description="" />
+  <div class="900px:block hidden relative h-full w-1/2">
+    <img
+      src={principalImage ?? "/Images/e-commerce.jpg"}
+      alt=""
+      class="rounded-xl h-full object-cover w-5/6 absolute z-10 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+    />
+  </div>
+</main>
