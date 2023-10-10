@@ -1,0 +1,17 @@
+---
+import type { Package } from "../../../../../Consts/Types";
+interface Props extends Package {}
+const { description, price, title } = Astro.props;
+---
+
+<article
+  class="flex flex-col w-64 h-64 bg-contrast rounded-xl text-white items-center justify-around"
+>
+  <strong>{title}</strong>
+  <p class="px-5">{description}</p>
+  <h3
+    class="bg-white text-contrast border-transparent border text-lg font-bold hover:bg-contrast hover:border hover:border-white hover:text-white cursor-pointer px-5 rounded hover:scale-110 transition-transform"
+  >
+    {`$${price}`}
+  </h3>
+</article>

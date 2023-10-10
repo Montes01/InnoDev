@@ -5,7 +5,7 @@ const textAreaMessage =
   "Ingrese información esencial sobre la página que desea crear para que podamos mantener su estilo.";
 ---
 
-<form action="" class="w-4/6 flex flex-col justify-between gap-12">
+<form action="" class="500px:w-5/6 1300px:w-4/6 w-full 500px:mx-0 px-4 flex flex-col justify-between gap-12">
   <Input
     isRequired={true}
     label="Nombre"
@@ -18,8 +18,8 @@ const textAreaMessage =
     placeholder="Ingresa tu telefono"
     name="telefono"
   />
-  <section class="flex flex-col gap-4">
-    <label for={areaId}> Informacion</label>
+  <section class="flex flex-col gap-3">
+    <label class="w-full self-start text-center px-5" for={areaId}> Informacion</label>
     <textarea
       name="Information"
       id={areaId}

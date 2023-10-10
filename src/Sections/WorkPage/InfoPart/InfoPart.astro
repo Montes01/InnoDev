@@ -1,0 +1,22 @@
+---
+import type { Package } from "../../../Consts/Types";
+import PackageCard from "./Items/SubItems/PackageCard.astro"
+interface Props {
+  name: string;
+  description: string;
+  packages?: Package[];
+}
+const { name, description, packages } = Astro.props;
+---
+
+<section class="w-full flex flex-col gap-12 p-10">
+  <p class="text-center">{`${name} ${description}`}</p>
+  <h2 class="w-full text-center text-5xl font-bold">Paquetes disponibles</h2>
+  {
+    packages
+    ? (<section class="flex flex-wrap w-full justify-center gap-10">
+        {packages?.map(el => <PackageCard description={el.description} price={el.price} title={el.title}/>)}
+    </section> )
+  : <h2>Esta categoria no cuenta con nigun paquete</h2>
+  }
+</section>

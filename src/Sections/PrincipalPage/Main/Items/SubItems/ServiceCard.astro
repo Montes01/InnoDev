@@ -1,12 +1,12 @@
 ---
 interface Props {
   text: string;
-  image: string;
+  image: `/${string}.${string}`;
 }
 const { text, image } = Astro.props;
 ---
 
-<a href={text} id="Card" class="2000px:h-96  rounded-md cursor-pointer relative overflow-hidden 500px:w-[47%] 500px:h-60 1500px:h-72 800px:w-[30%]">
+<a href={`Service/${text}`} id="Card" class="2000px:h-96  rounded-md cursor-pointer relative overflow-hidden 500px:w-[47%] 500px:h-60 1500px:h-72 800px:w-[30%]">
   <img src={image} class="w-full h-full object-cover" alt="" />
   <section
     class="absolute text-center min-w-full min-h-full text-white grid place-content-center top-0 left-0"

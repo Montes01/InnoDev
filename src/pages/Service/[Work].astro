@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Messages, Titles, services } from "../../Consts/Consts";
+import { Header } from "../../Sections/General/Header/Header";
+import InfoPart from "../../Sections/WorkPage/InfoPart/InfoPart.astro";
+import Buttons from "../../Sections/General/Header/Items/Buttons.astro";
+import Logo from "../../Sections/General/Header/Items/Logo.astro";
+import Main from "../../Sections/WorkPage/Main/Main.astro";
+import Footer from "../../Sections/PrincipalPage/Footer/Footer.astro";
+const { Work } = Astro.params;
+const {image, description, packages} = services.find(el => el.title === Work)
+---
+
+<Layout title={Titles.TRABAJOS}>
+  <Header client:only>
+    <Logo />
+    <Buttons />
+  </Header>
+  <InfoPart name={Work} description={description} packages={packages} />
+  <Main name={Work} description={"this is my description"} principalImage={image} />
+  <section class="pb-12 px-7">
+    <p class="text-lg text-center text-red-600">{Messages.ALERT_CONTACT}</p>
+  </section>
+  <Footer />
+</Layout>

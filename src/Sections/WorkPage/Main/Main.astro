@@ -1,5 +1,5 @@
 ---
-import InfoPart from "./Items/InfoPart.astro";
+import ShopPart from "./Items/ShopPart.astro";
 interface Props {
   name: string;
   description: string;
@@ -9,9 +9,9 @@ interface Props {
 const { name, principalImage } = Astro.props;
 ---
 
-<main class="flex flex-grow w-full py-12 bg-white justify-between">
-  <InfoPart name={name} description="" />
-  <div class="900px:block hidden relative h-full w-1/2">
+<main class="flex flex-grow w-full py-28 bg-white justify-between">
+  <ShopPart name={name} description="" />
+  <div class="1000px:block hidden relative h-full w-1/2">
     <img
       src={principalImage ?? "/Images/e-commerce.jpg"}
       alt=""
