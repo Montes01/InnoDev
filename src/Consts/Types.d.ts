@@ -10,9 +10,12 @@ export type Service = {
   title: string;
   description: string;
   image?: `/${string}.${string}`;
-  
-  packages?:Package[]
+  packages?:PackageList
 };
+
+
+export type PackageList = [Package,Package,Package]
+
 export type Package = {
   title: string;
   description: string;

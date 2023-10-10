@@ -8,7 +8,9 @@ import Logo from "../../Sections/General/Header/Items/Logo.astro";
 import Main from "../../Sections/WorkPage/Main/Main.astro";
 import Footer from "../../Sections/PrincipalPage/Footer/Footer.astro";
 const { Work } = Astro.params;
-const {image, description, packages} = services.find(el => el.title === Work)
+const Service = services.find((el) => el.title === Work)  
+
+if (!Service) return Astro.redirect("/404/NotFound");
 ---
 
 <Layout title={Titles.TRABAJOS}>
@@ -16,8 +18,12 @@ const {image, description, packages} = services.find(el => el.title === Work)
     <Logo />
     <Buttons />
   </Header>
-  <InfoPart name={Work} description={description} packages={packages} />
-  <Main name={Work} description={"this is my description"} principalImage={image} />
+  <InfoPart name={Work} description={Service? Service.description:null} packages={Service? Service.packages:null} />
+  <Main
+    name={Work}
+    description={"this is my description"}
+    principalImage={Service? Service.image:null}
+  />
   <section class="pb-12 px-7">
     <p class="text-lg text-center text-red-600">{Messages.ALERT_CONTACT}</p>
   </section>

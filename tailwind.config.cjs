@@ -22,6 +22,7 @@ module.exports = {
         '1300px': '1300px', 
         '1500px': '1500px',
         '2000px': '2000px',
+        'mobile': {"max": "500px"}
       }
     },
   },
