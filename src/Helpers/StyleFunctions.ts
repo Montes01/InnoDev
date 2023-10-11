@@ -1,6 +1,6 @@
 export const SolidfyHeader = (element: HTMLElement, isSolid: Boolean) => {
   const newStyle =
-    " bg-primary fixed py-6 rounded-b-xl border border-[#aaa] top-0 z-50 border-x-2";
+    " bg-primary/75 backdrop-blur-xl fixed py-6 rounded-b-xl border border-[#aaa] top-0 z-50 border-x-2";
   if (element) {
     if (!isSolid)
       element.className = element.className.replace(
