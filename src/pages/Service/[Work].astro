@@ -14,10 +14,6 @@ if (!Service) return Astro.redirect("/404/NotFound");
 ---
 
 <Layout title={Titles.TRABAJOS}>
-  <Header client:only>
-    <Logo />
-    <Buttons />
-  </Header>
   <InfoPart name={Work} description={Service? Service.description:null} packages={Service? Service.packages:null} />
   <Main
     name={Work}
