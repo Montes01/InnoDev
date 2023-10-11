@@ -8,7 +8,7 @@ const message =
 <section
   class="bg-contrast px-5 py-20 gap-24 flex flex-col justify-evenly items-center p5 text-white text-xl w-full"
 >
-  <p class="text-center text-4xl w-4/5">{message}</p>
+  <p class="text-center mobile:text-xl text-4xl w-4/5">{message}</p>
   <section class="flex gap-12 flex-wrap justify-center">
     {Facts.map((el) => <FactCard value={el.value} fact={el.fact} />)}
   </section>

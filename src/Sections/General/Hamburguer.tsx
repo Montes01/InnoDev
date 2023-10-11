@@ -1,15 +1,16 @@
-
-
 export const Hamburguer = () => {
-
-
   const handleClick = () => {
-    
-  }
+    const Head = document.getElementById("Header");
+    if (Head.className.indexOf("translate-x-[-100%]") === -1)
+      Head.className += " mobile:translate-x-[-100%]";
+    else Head.className = Head.className.replace("translate-x-[-100%]", "");
+  };
 
   return (
-
-    <section class="mobile:flex fixed z-50 bg-primary hidden w-full p-5">
+    <section
+      onClick={handleClick}
+      class="mobile:flex h-[5vh] fixed z-50 bg-primary hidden w-full px-5"
+    >
       <button>
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path
@@ -20,6 +21,5 @@ export const Hamburguer = () => {
         </svg>
       </button>
     </section>
-  )
-}
-
+  );
+};

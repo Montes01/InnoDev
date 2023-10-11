@@ -9,7 +9,7 @@ interface Props {
 const { name, description, packages } = Astro.props;
 ---
 
-<section class="w-full bg-contrast text-white flex flex-col gap-12 p-10">
+<section class="w-full mobile:mt-[5vh] bg-contrast text-white flex flex-col gap-12 p-10">
   <p class="text-center">{`${name} ${description}`}</p>
   <h2 class="w-full text-center text-5xl font-bold">Paquetes disponibles</h2>
   {
