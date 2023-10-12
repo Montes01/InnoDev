@@ -3,13 +3,75 @@ import { Companies as CompanyList } from "./../../../Consts/Consts";
 import Company from "./Items/Company.astro";
 ---
 
-<section class="1500px:border-x 1500px:border-[#ccc] px-20 mobile:px-7 bg-contrast w-full flex gap-12 flex-col p-12">
+<section
+  class="1500px:border-x 1500px:border-[#ccc] px-20 mobile:px-7 bg-contrast w-full flex gap-12 flex-col py-20 overflow-hidden"
+>
   <h2
-    class="font-bold bg-gradient-to-b mobile:text-lg from-black to-gray-600 text-center bg-clip-text text-transparent text-3xl [text-shadow:0px_2px_2px_rgba(0,0,255,50%)]"
+    class="font-bold bg-gradient-to-b mobile:text-lg from-white to-white text-center bg-clip-text text-transparent text-3xl [text-shadow:0px_2px_2px_rgba(150,200,255,50%)]"
   >
     Empresas que han confiado en nosotros
   </h2>
-  <section class="flex flex-wrap gap-12 items-center justify-center">
-    {CompanyList.map((el) => <Company name={el.name} image={el.image} />)}
+  <section id="slider" class="bg-contrast h-36 overflow-hidden relative">
+    <section id="slide-track" class="flex items-center">
+      {CompanyList.map((el) => <Company name={el.name} image={el.image} />)}
+    </section>
   </section>
 </section>
+<style>
+  @mixin white-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  $animationSpeed: 40s;
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+
+#slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+
+    &::before,
+    &::after {
+      @include white-gradient;
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+    }
+
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+    #slide-track {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+
+  }
+</style>

@@ -134,7 +134,7 @@ export const Companies: Company[] = [
     name: "InnoDev",
   },
   {
-    name: "Amazon",
+    name: "MyBuss",
   },
   {
     name: "Facebook",
@@ -143,7 +143,10 @@ export const Companies: Company[] = [
     name: "Amazon",
   },
   {
-    name: "Facebook",
+    name: "StartedUp",
+  },
+  {
+    name: "Venecia",
   },
 ];
 

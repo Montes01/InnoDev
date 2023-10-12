@@ -4,7 +4,7 @@ type Props = {
 };
 export const Header = ({ children }: Props) => {
   document.addEventListener("scroll", () => {
-    if (screen.width > 500) {
+    if (screen.width > 500 && screen.height > 500) {
       if (window.scrollY > 70)
         SolidfyHeader(document.getElementById("StickyButtons"), false);
       else if (window.scrollY < 45)
