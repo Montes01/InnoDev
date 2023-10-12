@@ -1,18 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Header } from "../Sections/General/Header/Header.tsx";
-import Main from "../Sections/PrincipalPage/Main/Main.astro";
+import Services from "../Sections/PrincipalPage/Services/Services.astro";
 import Statistics from "../Sections/PrincipalPage/Statistics/Statistics.astro";
 import Buttons from "../Sections/General/Header/Items/Buttons.astro";
 import Logo from "../Sections/General/Header/Items/Logo.astro";
 import Companies from "../Sections/PrincipalPage/Companies/Companies.astro";
-import Footer from "../Sections/PrincipalPage/Footer/Footer.astro";
+import Slider from "../Sections/PrincipalPage/Slider/Slider.astro";
+import Footer from "../Sections/General/Footer/Footer.astro";
 import { Titles } from "../Consts/Consts";
+import Featured from "../Sections/PrincipalPage/Featured/Featured.astro"
+import FrequentQuestions from "../Sections/PrincipalPage/FrequentQuestions/FrequentQuestions.astro";
 ---
 
 <Layout title={Titles.PRINCIPAL}>
-  <Main />
-  <Statistics />
+  <Slider/>
+  <Featured/>
+  <Services />
+  <FrequentQuestions/>
   <Companies />
+  <Statistics />
   <Footer />
 </Layout>

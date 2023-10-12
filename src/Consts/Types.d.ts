@@ -21,3 +21,15 @@ export type Package = {
   description: string;
   price: number;
 };
+
+export type FeaturedProject = {
+  title:string,
+  description:string,
+  image?:string,
+  logo?:string
+}
+
+export type Question = {
+  question:string,
+  response:string
+}

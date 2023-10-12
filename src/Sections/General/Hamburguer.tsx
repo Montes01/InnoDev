@@ -9,7 +9,7 @@ export const Hamburguer = () => {
   return (
     <section
       onClick={handleClick}
-      class="mobile:flex h-[5vh] fixed z-50 bg-primary hidden w-full px-5"
+      class="mobile:flex h-[5vh] min-h-[50px] fixed z-50 bg-primary hidden w-full px-5"
     >
       <button>
         <svg width="24" height="24" viewBox="0 0 24 24">

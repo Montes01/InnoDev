@@ -1,0 +1,21 @@
+---
+import { Questions } from "../../../Consts/Consts";
+import { Question } from "./SubItems/Question";
+---
+
+<section class="flex flex-col bg-primary mobile:px-2  w-full px-12 gap-12 text-center py-20">
+  <h2 class="text-5xl text-contrast mobile:text-lg ">Preguntas frecuentes</h2>
+  <strong class="text-2xl mobile:text-lg"
+    >Resuelve aqui tus dudas o comunicate con nosotros <a
+      href="#"
+      class="text-contrast ">Aqui</a
+    ></strong
+  >
+  <section class="flex flex-col gap-12">
+    {
+      Questions.map((el) => (
+        <Question client:only question={el.question} response={el.response} />
+      ))
+    }
+  </section>
+</section>

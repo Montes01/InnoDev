@@ -1,0 +1,30 @@
+---
+import { services } from "../../../Consts/Consts.ts";
+import ServiceCard from "./SubItems/ServiceCard.astro";
+---
+
+<section
+  class="self-center text-white bg-contrast flex flex-col items-center py-20 gap-12 box-border"
+>
+  <strong class="text-5xl mx-9 text-center mobile:text-xl"
+    >Estos son algunos de nuestros servicios</strong
+  >
+  <p class="mx-9 text-2xl text-center mobile:text-lg minimum:text-xs">
+    Sé parte de nosotros y/o crea tu software con nosotros
+  </p>
+  <section
+    class="flex w-full 500px:px-5 900px:px-5 px-5 700px:px-12 800px:px-7 box-border gap-5 justify-center flex-wrap"
+  >
+    {
+      services.map(({ title, description, image }) => {
+        return (
+          <ServiceCard
+            description=""
+            title={title}
+            image={image ?? "/Images/macbook.jpg"}
+          />
+        );
+      })
+    }
+  </section>
+</section>

@@ -1,0 +1,17 @@
+---
+import { FeaturedProjects } from "../../../../Consts/Consts";
+import ProjectCard from "./SubItems/ProjectCard.astro";
+---
+
+<section class="flex flex-wrap justify-center items-center gap-10 w-full">
+  {
+    FeaturedProjects.map((el) => (
+      <ProjectCard
+        description={el.description}
+        image={el.image}
+        logo={el.logo}
+        title={el.title}
+      />
+    ))
+  }
+</section>

@@ -1,0 +1,33 @@
+
+<article class="bg-secondary max-h-[1000px] min-h-[200px] overflow-hidden h-[70vh] relative">
+    <section id="ScrollSlider" class="flex min-h-full">
+      <img class="min-w-full max-w-full" src="/Images/coding.jpg" alt="" />
+      <img class="min-w-full max-w-full" src="/Images/laptop.jpg" alt="" />
+      <img class="min-w-full max-w-full" src="/Images/macbook.jpg" alt="" />
+      <img class="min-w-full max-w-full" src="/Images/coding.jpg" alt="" />
+    </section>
+    <div
+      class="absolute top-0 left-0 z-10 w-full h-full grid place-content-center text-center backdrop-brightness-[0.3]"
+    >
+      <h2 class="text-transparent mobile:text-4xl bg-clip-text bg-gradient-to-r from-emerald-600 to-white  font-[950] text-8xl">InnoDev</h2>
+      <br> 
+      <h3 class="text-transparent mobile:text-sm bg-clip-text bg-gradient-to-r font-bold from-slate-500 drop-shadow-[0_0_1px_black] to-white text-4xl mx-9 text-center">Empresa encargada del desarrollo de software</h3>
+    </div>
+  </article>
+  
+  <style>
+    #ScrollSlider {
+      & img{
+          object-fit: cover;
+          min-height: 100%;
+          animation: Scroll 55s infinite ;
+          object-position: center;
+      }
+  
+    }
+    @keyframes Scroll {
+      to {
+        transform: translateX(-300%);
+      }
+    }
+  </style>

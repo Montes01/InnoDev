@@ -1,4 +1,4 @@
-import type { Fact, Company, Service, PackageList } from "./Types";
+import type { Fact, Company, Service, PackageList, FeaturedProject, Question } from "./Types";
 
 const packageList = {
   E_COMMERCE: [
@@ -151,4 +151,28 @@ export const Messages = {
   ALERT_CONTACT:
     "La continuación de tu compra y detalles adicionales se gestionarán a través de WhatsApp o Gmail. Estamos aquí para ayudarte.",
   NOT_FOUND: "La pagina a la que intentas acceder no existe",
+  FEATURED: "Más de 1'000.000 de personas hacen parte de estas empresas"
 };
+
+export const FeaturedProjects:FeaturedProject[] = [
+  {
+    title: "Snaggy",
+    description: "Snaggy es un sitio web para comprar y vender productos"
+  },
+  {
+    title: "Snaggy",
+    description: "Snaggy es un sitio web para comprar y vender productos"
+  }
+]
+
+export const Questions:Question[] = [
+  {
+    question: "¿Cómo funciona InnoDev?",
+    response: "InnoDev es una empresa de desarrollo de software que ofrece aplicativos software."
+  },
+  {
+    question: "¿Cómo funciona InnoDev?",
+    response: "InnoDev es una empresa de desarrollo de software que ofrece aplicativos software."
+  }
+
+]
