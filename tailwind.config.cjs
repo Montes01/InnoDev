@@ -22,7 +22,7 @@ module.exports = {
         "1300px": "1300px",
         "1500px": "1500px",
         "2000px": "2000px",
-        mobile: { raw: "(max-height: 500px),(max-width:500px)" },
+        mobile: { raw: "(max-height: 750px),(max-width:500px)" },
         minimum: { max: "200px" },
         
       },

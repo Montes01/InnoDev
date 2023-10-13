@@ -7,7 +7,7 @@ import Company from "./Items/Company.astro";
   class="1500px:border-x 1500px:border-[#ccc] px-20 mobile:px-7 bg-contrast w-full flex gap-12 flex-col py-20 overflow-hidden"
 >
   <h2
-    class="font-bold bg-gradient-to-b mobile:text-lg from-white to-white text-center bg-clip-text text-transparent text-3xl [text-shadow:0px_2px_2px_rgba(150,200,255,50%)]"
+    class="font-bold bg-gradient-to-b mobile:text-xl from-white to-white text-center bg-clip-text text-transparent text-3xl [text-shadow:0px_2px_2px_rgba(150,200,255,50%)]"
   >
     Empresas que han confiado en nosotros
   </h2>
@@ -18,42 +18,44 @@ import Company from "./Items/Company.astro";
   </section>
 </section>
 <style>
-  @mixin white-gradient {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
 
-  $animationSpeed: 40s;
 
 @keyframes scroll {
     0% {
       transform: translateX(0);
     }
+    50% {
+      transform: translateX(calc(-250px * 2));
+    }
+    
     100% {
-      transform: translateX(calc(-250px * 7));
+      transform: translateX(0);
     }
   }
 
 #slider {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-    height: 100px;
+    background: #3b56b5;
+    height: 33vw;
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 960px;
-
+    width: 80vw;
+    max-height: 260px;
+    max-width: 2000px;
+    
     &::before,
     &::after {
-      @include white-gradient;
-      content: "";
-      height: 100px;
-      position: absolute;
-      width: 200px;
-      z-index: 2;
+      background: linear-gradient(
+        to right,
+        #3b56b5 0%,
+        rgba(255, 255, 255, 0) 100%
+        );
+        content: "";
+        height: 33vw;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+        max-height: 260px;
     }
 
     &::after {
@@ -68,9 +70,12 @@ import Company from "./Items/Company.astro";
     }
 
     #slide-track {
-      animation: scroll $animationSpeed linear infinite;
+      animation: scroll 30s linear infinite;
       display: flex;
-      width: calc(250px * 14);
+      align-items: center ;
+      justify-content: space-between;
+      width: calc(30vw  * 7 );
+      max-width: calc(250px *7 );
     }
 
   }
