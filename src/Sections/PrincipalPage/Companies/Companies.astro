@@ -11,72 +11,59 @@ import Company from "./Items/Company.astro";
   >
     Empresas que han confiado en nosotros
   </h2>
-  <section id="slider" class="bg-contrast h-36 overflow-hidden relative">
-    <section id="slide-track" class="flex items-center">
+  <section id="slider" class="bg-contrast  ">
+    <section id="slide-track" class="">
       {CompanyList.map((el) => <Company name={el.name} image={el.image} />)}
     </section>
   </section>
 </section>
 <style>
-
-
-@keyframes scroll {
+  @keyframes scroll {
     0% {
       transform: translateX(0);
     }
-    50% {
-      transform: translateX(calc(-250px * 2));
-    }
-    
     100% {
-      transform: translateX(0);
+      transform: translateX(calc(-250px * 7));
     }
   }
 
-#slider {
-    background: #3b56b5;
-    height: 33vw;
+  #slider {
+    box-shadow: 0 0px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 270px;
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 80vw;
-    max-height: 260px;
-    max-width: 2000px;
-    
-    &::before,
-    &::after {
-      background: linear-gradient(
-        to right,
-        #3b56b5 0%,
-        rgba(255, 255, 255, 0) 100%
-        );
-        content: "";
-        height: 33vw;
-        position: absolute;
-        width: 200px;
-        z-index: 2;
-        max-height: 260px;
-    }
+    width: 100%;
+  }
+  #slide-track {
+    animation: scroll 44s linear infinite;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: calc(250px * 14);
+  }
 
-    &::after {
-      right: 0;
-      top: 0;
-      transform: rotateZ(180deg);
-    }
 
-    &::before {
-      left: 0;
-      top: 0;
-    }
+  #slider::before::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 250%
+    );
+    content: "";
+    height: 250px;
+    position: absolute;
+    width: 200px;
+    z-index: 20;
+  }
+  #slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
 
-    #slide-track {
-      animation: scroll 30s linear infinite;
-      display: flex;
-      align-items: center ;
-      justify-content: space-between;
-      width: calc(30vw  * 7 );
-      max-width: calc(250px *7 );
-    }
-
+  #slider::before {
+    left: 0;
+    top: 0;
   }
 </style>

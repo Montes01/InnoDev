@@ -9,34 +9,37 @@ const { selected } = Astro.props;
   id="StickyButtons"
   class:list={[
     "flex justify-center w-full max-w-[2000px] gap-5 px-2",
-    "1500px:py-2 1500px:w-3/6",
-    "mobile:flex-col mobile:w-full mobile:justify-center mobile:gap-7 mobile:h-auto mobile:items-center"]}
+    "1000px:py-2 1000px:w-3/6",
+    "mobile:flex-col mobile:w-full mobile:justify-center mobile:gap-7 mobile:items-center",
+  "mobileX:flex-col mobileX:w-full mobileX:justify-center mobileX:gap-7 mobileX:items-center",
+"HStretch:h-full"]
+    }
 >
   <button id="StickyButton"
     class:list={[
-      " 1500px:py-3 text-sm px-2 max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      " 1000px:py-3 text-sm px-2 max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
       ,
       selected === 0
         ? " text-white bg-contrast hover:bg-white hover:text-contrast"
         : "bg-white hover:bg-contrast hover:text-white text-primary",
-    "mobile:w-full mobile:py-5"]}>Nuestros trabajos</button
+    "mobile:w-full mobile:py-5 mobileX:w-full mobileX:py-5"]}>Nuestros trabajos</button
   >
   <button id="StickyButton"
     class:list={[
-      " 1500px:py-3 text-sm px-2 max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      " 1000px:py-3 text-sm px-2 max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
       ,
       selected === 1
         ? " text-white bg-contrast hover:bg-white hover:text-contrast"
         : "bg-white hover:bg-contrast hover:text-white text-primary",
-    "mobile:w-full mobile:py-5"]}>Contactanos</button
+    "mobile:w-full mobile:py-5 mobileX:w-full mobileX:py-5"]}>Contactanos</button
   >
   <button id="StickyButton"
     class:list={[
-      " 1500px:py-3 text-sm px-2 max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      " 1000px:py-3 text-sm px-2 max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
       ,
       selected === 2
         ? " text-white bg-contrast hover:bg-white hover:text-contrast"
         : "bg-white hover:bg-contrast hover:text-white text-primary",
-    "mobile:w-full mobile:py-5"]}>Trabaja con nosotros</button
+    "mobile:w-full mobile:py-5 mobileX:w-full mobileX:py-5"]}>Trabaja con nosotros</button
   >
 </section>

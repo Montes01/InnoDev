@@ -1,19 +1,19 @@
 ---
+import ServiceDescription from "../../Sections/WorkPage/ServiceDescription/ServiceDescription.astro"
 import Layout from "../../layouts/Layout.astro";
 import { Messages, Titles, services } from "../../Consts/Consts";
-import { Header } from "../../Sections/General/Header/Header";
-import InfoPart from "../../Sections/WorkPage/InfoPart/InfoPart.astro";
-import Buttons from "../../Sections/General/Header/Items/Buttons.astro";
-import Logo from "../../Sections/General/Header/Items/Logo.astro";
+import InfoPart from "../../Sections/WorkPage/Packages/Packages.astro";
 import Main from "../../Sections/WorkPage/Main/Main.astro";
 import Footer from "../../Sections/General/Footer/Footer.astro";
+import MoreInfo from "../../Sections/WorkPage/MoreInfo/MoreInfo.astro"
 const { Work } = Astro.params;
 const Service = services.find((el) => el.title === Work)  
-
 if (!Service) return Astro.redirect("/404/NotFound");
 ---
 
 <Layout title={Titles.TRABAJOS}>
+  <ServiceDescription description={Service.description}  name={Service.title}/>
+  <MoreInfo characteristics={Service.characteristics} finality={Service.finality}/>
   <InfoPart name={Work} description={Service? Service.description:null} packages={Service? Service.packages:null} />
   <Main
     name={Work}

@@ -5,6 +5,7 @@ import type {
   PackageList,
   FeaturedProject,
   Question,
+  Package,
 } from "./Types";
 
 const packageList = {
@@ -28,17 +29,12 @@ const packageList = {
       price: 1500,
     },
   ],
-  SITIO_WEB: [
-    { title: "Sitio web", description: "Sitio web mas", price: 1500 },
-    { title: "Sitio web", description: "Sitio web mas", price: 1500 },
-    { title: "Sitio web", description: "Sitio web mas", price: 1500 },
-  ],
   LANDING_PAGES: [
     { title: "Landing pages", description: "Landing pages mas", price: 1500 },
     { title: "Landing pages", description: "Landing pages mas", price: 1500 },
     { title: "Landing pages", description: "Landing pages mas", price: 1500 },
   ],
-  SITIO_INFORMAIVO: [
+  PAGINA_INFORMATIVA: [
     {
       title: "Sitio informativo",
       description: "Sitio informativo mas",
@@ -55,7 +51,7 @@ const packageList = {
       price: 1500,
     },
   ],
-  APP_MUSICA: [
+  SITIO_A_LA_MEDIDA: [
     { title: "App musica", description: "App musica mas", price: 1500 },
     { title: "App musica", description: "App musica mas", price: 1500 },
     { title: "App musica", description: "App musica mas", price: 1500 },
@@ -76,44 +72,71 @@ export const services: Service[] = [
   {
     title: "E-Commerce",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "un E-Commerce Es una tienda en línea donde puedes comprar y vender productos o servicios a través de Internet en lugar de hacerlo en una tienda física.",
+    prevDescription:
+      "Ofrece tus productos o servicios en linea mejorando la experiencia de tus clientes",
     image: "/Images/e-commerce.jpg",
     packages: packageList.E_COMMERCE as PackageList,
-  },
-  {
-    title: "Sitio web",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    image: "/Images/sitio-web.jpg",
-    packages: packageList.SITIO_WEB as PackageList,
-  },
-  {
-    title: "Landing pages",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    image: null,
-    packages: packageList.LANDING_PAGES as PackageList,
-  },
-  {
-    title: "Sitio informativo",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    image: null,
-    packages: packageList.SITIO_INFORMAIVO as PackageList,
-  },
-  {
-    title: "App musica",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    image: null,
-    packages: packageList.APP_MUSICA as PackageList,
+    characteristics: [
+      "Catálogo en línea",
+      "Carrito de Compras",
+      "Proceso de Pago en Línea",
+      "Seguridad",
+      "Proceso de Compra Simplificado",
+      "Opciones de Envío y Entrega",
+      "Atención al Cliente en Línea",
+      "Gestión de Devoluciones y Reembolsos",
+      "Integración de Redes de Pago"
+    ],
+    finality: "Agiliza y hace más accesible el proceso de comercio, beneficiando tanto a compradores como a vendedores\n  Ofrece a los vendedores una plataforma para llegar a una audiencia más amplia, reduciendo los costos asociados con las tiendas físicas."
   },
   {
     title: "Blogs",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    prevDescription:
+      "Publica tus propios articulos, guias, e historias sobre temas que mas te gusten",
     image: null,
     packages: packageList.BLOGS as PackageList,
+    characteristics: [],
+    finality: ""
+
+  },
+  {
+    title: "Landing pages",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    prevDescription:
+      "Captura posibles clientes potenciales con la mejor estrategia de marketing",
+    image: null,
+    packages: packageList.LANDING_PAGES as PackageList,
+    characteristics: [],
+    finality: ""
+
+  },
+  {
+    title: "Página informativa",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    prevDescription:
+      "Ofrece contenido util y relevante para todos los visitantes de tu pagina",
+    image: null,
+    packages: packageList.PAGINA_INFORMATIVA as PackageList,
+    characteristics: [],
+    finality: ""
+
+  },
+  {
+    title: "Sitio a la medida",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    prevDescription:
+      "Has realidad la pagina de tus sueños compartiendo con nosotros tus expectativas",
+    image: null,
+    packages: packageList.SITIO_A_LA_MEDIDA as PackageList,
+    characteristics: [],
+    finality: ""
+
   },
 ];
 
@@ -155,6 +178,30 @@ export const Companies: Company[] = [
   {
     name: "Venecia",
   },
+  {
+    name: "InnoDev",
+  },
+  {
+    name: "MyBuss",
+  },
+  {
+    name: "Facebook",
+  },
+  {
+    name: "Amazon",
+  },
+  {
+    name: "StartedUp",
+  },
+  {
+    name: "Venecia",
+  },
+  {
+    name: "StartedUp",
+  },
+  {
+    name: "Venecia",
+  },
 ];
 
 export const Messages = {
@@ -171,7 +218,8 @@ export const FeaturedProjects: FeaturedProject[] = [
   },
   {
     title: "MyBuss",
-    description: "MyBuss es una empresa que nos informa sobre las rutas en armenia - Colombia",
+    description:
+      "MyBuss es una empresa que nos informa sobre las rutas en armenia - Colombia",
   },
   {
     title: "Snaggy",

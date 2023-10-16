@@ -9,12 +9,14 @@ export type Company = {
 export type Service = {
   title: string;
   description: string;
+  prevDescription: string;
   image?: `/${string}.${string}`;
-  packages?:PackageList
+  packages?: PackageList;
+  characteristics: string[];
+  finality: string;
 };
 
-
-export type PackageList = [Package,Package,Package]
+export type PackageList = [Package, Package, Package];
 
 export type Package = {
   title: string;
@@ -23,13 +25,13 @@ export type Package = {
 };
 
 export type FeaturedProject = {
-  title:string,
-  description:string,
-  image?:string,
-  logo?:string
-}
+  title: string;
+  description: string;
+  image?: string;
+  logo?: string;
+};
 
 export type Question = {
-  question:string,
-  response:string
-}
+  question: string;
+  response: string;
+};

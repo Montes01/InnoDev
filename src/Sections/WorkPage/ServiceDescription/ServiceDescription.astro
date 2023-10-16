@@ -1,0 +1,17 @@
+---
+import ImagesPart from "./Items/ImagesPart.astro";
+
+interface Props {
+  name: string;
+  description: string;
+}
+const { name, description } = Astro.props;
+---
+
+<main class="flex mobile:mt-[5vh] mobileX:mt-[5vh] bg-contrast w-full justify-center py-20 gap-[5%]">
+  <section class="text-white h-full flex  w-full mobile:p-2 justify-center gap-5 flex-col items-center 700px:w-[35%] p-5">
+    <h2 class="text-3xl text-center font-extrabold">{`¿Que es ${name}?`}</h2>
+    <p class="text-start max-w-[40ch]">{description}</p>
+  </section>
+  <ImagesPart />
+</main>
