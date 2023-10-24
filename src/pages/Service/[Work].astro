@@ -1,6 +1,7 @@
 ---
 import ServiceDescription from "../../Sections/WorkPage/ServiceDescription/ServiceDescription.astro"
 import Layout from "../../layouts/Layout.astro";
+import Examples from "../../Sections/WorkPage/Examples/Examples.astro"
 import { Messages, Titles, services } from "../../Consts/Consts";
 import InfoPart from "../../Sections/WorkPage/Packages/Packages.astro";
 import Main from "../../Sections/WorkPage/Main/Main.astro";
@@ -11,17 +12,15 @@ const Service = services.find((el) => el.title === Work)
 if (!Service) return Astro.redirect("/404/NotFound");
 ---
 
-<Layout title={Titles.TRABAJOS}>
+<Layout title={Titles.SERVICE(Work)}>
   <ServiceDescription description={Service.description}  name={Service.title}/>
   <MoreInfo characteristics={Service.characteristics} finality={Service.finality}/>
+  <Examples service={Service}/>
   <InfoPart name={Work} description={Service? Service.description:null} packages={Service? Service.packages:null} />
   <Main
     name={Work}
     description={"this is my description"}
     principalImage={Service? Service.image:null}
   />
-  <section class="pb-12 px-7">
-    <p class="text-lg text-center text-red-600">{Messages.ALERT_CONTACT}</p>
-  </section>
   <Footer />
 </Layout>

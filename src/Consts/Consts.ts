@@ -67,6 +67,7 @@ export const Titles = {
   PRINCIPAL: "InnoDev - Bienvenido a nuestra compañía",
   TRABAJOS: "InnoDev - Nuestros trabajos",
   NOT_FOUND: "InnoDev - Página no encontrada",
+  SERVICE: (service: string) => `InnoDev - ${service}`,
 };
 export const services: Service[] = [
   {
@@ -86,9 +87,15 @@ export const services: Service[] = [
       "Opciones de Envío y Entrega",
       "Atención al Cliente en Línea",
       "Gestión de Devoluciones y Reembolsos",
-      "Integración de Redes de Pago"
+      "Integración de Redes de Pago",
     ],
-    finality: "Agiliza y hace más accesible el proceso de comercio, beneficiando tanto a compradores como a vendedores\n  Ofrece a los vendedores una plataforma para llegar a una audiencia más amplia, reduciendo los costos asociados con las tiendas físicas."
+    finality:
+      "Agiliza y hace más accesible el proceso de comercio, beneficiando tanto a compradores como a vendedores\n  Ofrece a los vendedores una plataforma para llegar a una audiencia más amplia, reduciendo los costos asociados con las tiendas físicas.",
+    examples: [
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+    ],
   },
   {
     title: "Blogs",
@@ -99,8 +106,12 @@ export const services: Service[] = [
     image: null,
     packages: packageList.BLOGS as PackageList,
     characteristics: [],
-    finality: ""
-
+    finality: "",
+    examples: [
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+    ],
   },
   {
     title: "Landing pages",
@@ -111,8 +122,12 @@ export const services: Service[] = [
     image: null,
     packages: packageList.LANDING_PAGES as PackageList,
     characteristics: [],
-    finality: ""
-
+    finality: "",
+    examples: [
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+    ],
   },
   {
     title: "Página informativa",
@@ -123,8 +138,12 @@ export const services: Service[] = [
     image: null,
     packages: packageList.PAGINA_INFORMATIVA as PackageList,
     characteristics: [],
-    finality: ""
-
+    finality: "",
+    examples: [
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+    ],
   },
   {
     title: "Sitio a la medida",
@@ -135,8 +154,12 @@ export const services: Service[] = [
     image: null,
     packages: packageList.SITIO_A_LA_MEDIDA as PackageList,
     characteristics: [],
-    finality: ""
-
+    finality: "",
+    examples: [
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+      {} as FeaturedProject,
+    ],
   },
 ];
 

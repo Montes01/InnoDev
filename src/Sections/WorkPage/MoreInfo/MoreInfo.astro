@@ -6,19 +6,21 @@ interface Props {
 const { characteristics, finality} = Astro.props
 ---
 
-<section class="flex bg-primary  relative w-full justify-center py-20 px-5  items-center
+<section class="flex break-after-all    bg-primary  relative w-full justify-center py-20 px-5  items-center
 1000px:flex-row flex-col 1000px:after:block gap-20
-after:[content:'';] after:w-0.5 after:left-1/2 after:right-0 after:absolute  after:top-1/2 after:-translate-y-1/2 after:h-4/6 after:bg-contrast after:hidden
+after:[content:'';] after:w-0.5 after:left-1/2 after:right-0 after:absolute  after:bottom-0 after:h-1/3 after:bg-contrast after:hidden
+before:[content:'';] before:top-1/3 before:h-1/3 before:bg-gradient-to-b before:from-transparent before:to-contrast before:w-0.5
+before:left-1/2 before:right-0 before:absolute mobile:before:hidden mobileX:before:hidden
 ">
     <div class="flex flex-col mobile:w-full h-full text-contrast w-1/2 items-center justify-between gap-7">
         <h2 class="text-3xl font-bold w-full text-center">Caracteristicas</h2>
-        <ul class="flex flex-col justify-start h-5/6 text-contrast">
+        <ul class="flex flex-col justify-start h-5/6 text-black">
             {characteristics.map(el => <li class="list-disc">{el}</lic>)}
         </ul>
     </div>
     <div class="flex flex-col mobile:w-full h-full text-contrast w-1/2 items-center justify-between gap-5">
         <h2 class="text-3xl font-bold">Finalidad</h2>
-        <ul class="flex flex-col h-5/6 max-w-[40ch] justify-start gap-3 text-contrast">
+        <ul class="flex tracking-tight [line-height:30px;] flex-col h-5/6 max-w-[40ch] justify-start gap-3 text-black">
             {finality}
         </ul>
     </div>

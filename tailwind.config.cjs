@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         primary: "#3b56b5",
         contrast: "#3b56b5",
+        extra: "#2f5fb5" //almost dark green 
       },
       screens: {
         "500px": "500px",

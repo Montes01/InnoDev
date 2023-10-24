@@ -1,0 +1,55 @@
+---
+import { type Service } from "../../../Consts/Types";
+interface Props {
+  service: Service;
+}
+const { service } = Astro.props;
+const { examples, title } = service;
+import FeaturedCard from "../../PrincipalPage/Featured/Items/SubItems/ProjectCard.astro";
+---
+
+<section id="FullSection" class=" before:bg-gradient-to-r before:from-transparent before:to-contrast
+after:bg-gradient-to-l after:from-transparent after:to-contrast
+flex relative flex-col w-full items-center justify-center gap-12 py-20 px-5 bg-primary">
+  <div class="h-[2px] absolute top-0 w-1/2 bg-contrast"/>
+  <h2 class="text-4xl text-contrast font-bold">Ejemplos de {title}</h2>
+  <strong>Investiga un poco sobre como son los {title}</strong>
+  <section class="flex flex-wrap justify-center gap-12 w-full">
+
+    {
+      examples.map((el) => (
+        <FeaturedCard
+        description={el.description}
+        image={el.image}
+        logo={el.logo}
+        title={el.title}
+        />
+        ))
+      }
+      </section>
+</section>
+
+<style>
+
+
+  #FullSection::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    z-index: 3;
+    width: 20%;
+    left: 5%;
+    height: 2px;
+  }
+
+  #FullSection::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    z-index: 3;
+    width: 20%;
+    right: 5%;
+    height: 2px;
+  }
+
+</style>

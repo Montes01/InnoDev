@@ -14,6 +14,7 @@ export type Service = {
   packages?: PackageList;
   characteristics: string[];
   finality: string;
+  examples: [FeaturedProject, FeaturedProject, FeaturedProject]
 };
 
 export type PackageList = [Package, Package, Package];
