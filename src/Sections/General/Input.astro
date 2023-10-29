@@ -9,28 +9,21 @@ interface Props {
 const { label, placeholder, name, type, isRequired } = Astro.props;
 ---
 
-<section class="flex border 500px:p-2 py-2 rounded-xl gap-3 500px:flex-row flex-col items-center justify-between w-full">
-  <label class="500px:text-center 500px:px-0 px-5 self-start flex-grow 500px:border-r" for={name}>{isRequired?(`${label} *`): label}</label>
-  {
-    isRequired ? (
-      <input
-        type={type ?? "text"}
-        class="px-5 500px:w-[70%] w-full rounded-xl focus:outline-none"
-        id={name}
-        name={name}
-        required
-        placeholder={placeholder}
-        type="text"
-      />
-    ) : (
-      <input
-        type={type ?? "text"}
-        class="px-5 500px:w-[70%] w-full rounded-xl focus:outline-none"
-        id={name}
-        name={name}
-        placeholder={placeholder}
-        type="text"
-      />
-    )
-  }
+<section
+  class="flex border bg-white 500px:p-2 py-2 rounded-xl gap-3 500px:flex-row flex-col items-center justify-between w-full"
+>
+  <label
+    class="500px:text-center 500px:px-0 px-5 self-start flex-grow 500px:border-r"
+    for={name}>{isRequired ? `${label} *` : label}</label
+  >
+
+  <input
+    type={type ?? "text"}
+    class="px-5 500px:w-[70%] w-full rounded-xl focus:outline-none"
+    id={name}
+    name={name}
+    required={isRequired}
+    placeholder={placeholder}
+    type="text"
+  />
 </section>

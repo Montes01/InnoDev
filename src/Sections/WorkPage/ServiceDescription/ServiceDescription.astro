@@ -8,10 +8,16 @@ interface Props {
 const { name, description } = Astro.props;
 ---
 
-<main class="flex mobile:mt-[5vh] mobileX:mt-[5vh] bg-contrast w-full justify-center py-20 gap-[5%]">
-  <section class="text-white h-full flex  w-full mobile:p-2 justify-center gap-5 flex-col items-center 800px:w-[35%] p-5">
-    <h2 class="text-3xl text-center font-extrabold">{`¿Que es ${name}?`}</h2>
-    <p class="text-start max-w-[40ch]">{description}</p>
-  </section>
-  <ImagesPart />
+<main
+  class="flex 1000px:mt-20  pt-20 px-12 mobileX:mt-[5vh] bg-primary w-full justify-center gap-[5%]"
+>
+  <div class="bg-contrast px-12 py-12 rounded-xl w-full h-full justify-between flex">
+    <section
+      class="text-white h-full flex w-full mobile:p-2 justify-start gap-5 flex-col items-center 800px:w-[35%] p-5"
+    >
+      <h2 class="text-3xl text-center font-extrabold">{`¿Que es ${name}?`}</h2>
+      <p class="text-start max-w-[40ch]">{description}</p>
+    </section>
+    <ImagesPart />
+  </div>
 </main>

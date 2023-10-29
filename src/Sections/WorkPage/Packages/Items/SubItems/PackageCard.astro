@@ -5,13 +5,13 @@ const { description, price, title } = Astro.props;
 ---
 
 <article
-  class="flex flex-col w-80 h-96 bg-primary rounded-xl text-contrast items-center justify-around"
+  class="flex flex-col w-96 gap-5 h-[30rem] max-h-[80vh] bg-contrast rounded-xl text-white items-center p-5 justify-start cursor-pointer
+  hover:scale-105 hover:brightness-105 hover:drop-shadow-[0_0_23px_white] hover:transition-transform
+
+  "
 >
-  <strong>{title}</strong>
-  <p class="px-5">{description}</p>
-  <h3
-    class="hover:bg-white hover:text-contrast border-transparent  text-lg font-bold bg-contrast border hover:border-contrast text-white cursor-pointer px-5 rounded hover:scale-110 transition-transform"
-  >
-    {`$${price}`}
-  </h3>
+  <strong class="text-2xl">{title}</strong>
+  <section class="flex -gap-2 flex-col overflow-scroll">
+    {description.map((el) => <p class="w-auto text-ellipsis">- {el}</p>)}
+  </section>
 </article>
