@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { Hamburguer } from "../Sections/General/Hamburguer.tsx";
-import { Header } from "../Sections/General/Header/Header";
+import  Header  from "../Sections/General/Header/Header.astro";
 import Buttons from "../Sections/General/Header/Items/Buttons.astro";
 import Logo from "../Sections/General/Header/Items/Logo.astro";
 interface Props {
@@ -26,15 +26,12 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="bg-gradient-to-br from-contrast via-contrast to-white">
+  <body class="bg-gradient-to-b from-black  to-contrast">
     <section
       class="min-h-screen max-w-[2000px] 2000px:border-x 2000px:border-gray-200 break-after-all bg-transparent/75 top-0 flex flex-col w-screen items-center"
     >
-      <Header client:only>
-        <Logo />
-        <Buttons />
-      </Header>
-      <Hamburguer client:only />
+      <Header />
+      <Hamburguer client:idle />
       <slot />
     </section>
     <style is:global>

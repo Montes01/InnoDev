@@ -3,14 +3,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      backgroundColor: {
-        primary: "#E6E6E6",
-        secondary: "#c6c6c6",
-        blue_parts: "#00ff00",
-      },
       colors: {
-        primary: "#3b56b5",
-        contrast: "#3b56b5",
+        primary: "#F19224",
+        contrast: "#16132E",
         extra: "#2f5fb5" //almost dark green 
       },
       screens: {
@@ -27,6 +22,7 @@ module.exports = {
         mobileX: {raw: "(max-height: 650px)"},
         HStretch: {raw: "(max-height: 500px)"},
         minimum: { max: "200px" },
+        fullMobile: {raw: "(max-width:500px) or (max-height: 650px)"}
         
       },
     },

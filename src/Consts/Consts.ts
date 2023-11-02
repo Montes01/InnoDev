@@ -12,54 +12,126 @@ const packageList = {
   E_COMMERCE: [
     {
       title: "Basico",
-      description:
-        "Incluye una diseño estandar de un E-Commerce sin funcionalidades avanzadas",
-      price: 1500,
+      description: [
+        "Diseño básico de la tienda en línea.",
+        "Integración de hasta 20 productos.",
+        "Carrito de compras y sistema de pago básico.",
+        "Optimización para dispositivos móviles.",
+        "Hosting por 3 meses.",
+        "Dominio",
+        "Soporte técnico básico por 3 meses.",
+      ],
+
+      price: 1200000,
     },
     {
-      title: "Basico",
-      description:
-        "Incluye una diseño estandar de un E-Commerce sin funcionalidades avanzadas",
-      price: 1500,
+      title: "Intermedio",
+      description: [
+        "Diseño personalizado y atractivo de la tienda en línea.",
+        "Integración de hasta 100 productos.",
+        "Carrito de compras avanzado y sistema de pago seguro.",
+        "Optimización SEO básica para productos.",
+        "Integración de redes sociales.",
+        "Hosting por 6 meses.",
+        "Dominio",
+        "Soporte técnico básico por 6 meses.",
+      ],
+
+      price: 3000000,
     },
     {
-      title: "Basico",
-      description:
-        "Incluye una diseño estandar de un E-Commerce sin funcionalidades avanzadas",
-      price: 1500,
+      title: "Avanzado",
+      description: [
+        "Diseño premium y altamente personalizado de la tienda en línea.",
+        "Integración de catálogo ilimitado de productos.",
+        "Carrito de compras avanzado, sistema de pago seguro y gestión de inventario.",
+        "Optimización SEO avanzada para productos.",
+        "Integración con CRM y herramientas de análisis.",
+        "Hosting por 1 año.",
+        "Dominio",
+        "Soporte técnico avanzado por 6 meses.",
+      ],
+
+      price: 6000000,
     },
   ],
   LANDING_PAGES: [
-    { title: "Landing pages", description: "Landing pages mas", price: 1500 },
-    { title: "Landing pages", description: "Landing pages mas", price: 1500 },
-    { title: "Landing pages", description: "Landing pages mas", price: 1500 },
+    {
+      title: "Landing pages",
+      description: [
+        "Hosting x 1 año GRATIS",
+        "Dominio",
+        "Identificar modelo de negocio",
+        "Diseño atractivo y funcional",
+        "Adaptacion a dispositivos moviles",
+        "Propuesta de valor",
+        "SEO -> Estrategia de posicionamiento en linea",
+        "Certificado Seguridad",
+        "5 Secciones",
+      ],
+
+      price: 350000,
+    },
   ],
   PAGINA_INFORMATIVA: [
     {
       title: "Sitio informativo",
-      description: "Sitio informativo mas",
-      price: 1500,
-    },
-    {
-      title: "Sitio informativo",
-      description: "Sitio informativo mas",
-      price: 1500,
-    },
-    {
-      title: "Sitio informativo",
-      description: "Sitio informativo mas",
-      price: 1500,
+      description: [
+        "Hosting x 1 año GRATIS",
+        "Dominio",
+        "Diseño sencillo y profesional",
+        "Contenido estatico",
+        "Optimización para Dispositivos",
+        "Formulario de Contacto",
+        "Integracion de Redes Sociales",
+        "Asesoramiento en Contenido",
+        "Escalabilidad ",
+        "Seguridad avanzada",
+        "Soporte",
+        "Capacitaciones",
+      ],
+
+      price: 1000000,
     },
   ],
   SITIO_A_LA_MEDIDA: [
-    { title: "App musica", description: "App musica mas", price: 1500 },
-    { title: "App musica", description: "App musica mas", price: 1500 },
-    { title: "App musica", description: "App musica mas", price: 1500 },
+    {
+      title: "App musica",
+      description: [
+        "Hosting x 1 año GRATIS",
+        "Dominio",
+        "Diseño personalizado, atractivo y funcional",
+        "Adaptacion a dispositivos moviles",
+        "Gestion de Contenidos Personalizada",
+        "Integraciones Avanzadas",
+        "Integracion de Redes Sociales",
+        "SEO -> Estrategia de posicionamiento en linea",
+        "Escalabilidad",
+        "Seguridad avanzada",
+        "Soporte",
+        "Capacitaciones",
+        "Publicaciones personalizadas, texto, imagenes, audios, etc.",
+      ],
+
+      price: 1500000,
+    },
   ],
   BLOGS: [
-    { title: "App musica", description: "App musica mas", price: 1500 },
-    { title: "App musica", description: "App musica mas", price: 1500 },
-    { title: "App musica", description: "App musica mas", price: 1500 },
+    {
+      title: "App musica",
+      description: [
+        "Hosting x 1 año GRATIS",
+        "Dominio",
+        "Diseño personalizado, atractivo y funcional",
+        "Adaptacion a dispositivos moviles",
+        "Estructura de navegacion, hasta 5 rutas (Inicio, contacto, publicaciones, sobre mi, etc)",
+        "Integracion de Redes Sociales",
+        "SEO -> Estrategia de posicionamiento en linea",
+        "Publicaciones personalizadas, texto, imagenes, audios, etc.",
+      ],
+
+      price: 1500000,
+    },
   ],
 };
 

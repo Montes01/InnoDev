@@ -22,7 +22,7 @@ export const Question = ({ question, response }: Quest) => {
       <button
         type="button"
         onClick={handleClick}
-        className="bg-secondary mobile:text-base text-2xl mobile:px-3 px-36 py-5 rounded-xl"
+        className="bg-white text-primary mobile:text-base text-2xl mobile:px-3 px-36 py-5 rounded-xl"
       >
         {question}
       </button>

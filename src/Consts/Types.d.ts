@@ -9,19 +9,19 @@ export type Company = {
 export type Service = {
   title: string;
   description: string;
-  prevDescription: string;
+  prevDescription?: string;
   image?: `/${string}.${string}`;
   packages?: PackageList;
-  characteristics: string[];
-  finality: string;
-  examples: [FeaturedProject, FeaturedProject, FeaturedProject]
+  characteristics?: string[];
+  finality?: string;
+  examples?: [FeaturedProject, FeaturedProject, FeaturedProject]
 };
 
 export type PackageList = [Package, Package, Package];
 
 export type Package = {
   title: string;
-  description: string;
+  description:  string[];
   price: number;
 };
 

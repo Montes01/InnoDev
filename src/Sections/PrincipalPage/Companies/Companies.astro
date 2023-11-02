@@ -4,14 +4,14 @@ import Company from "./Items/Company.astro";
 ---
 
 <section
-  class="1500px:border-x 1500px:border-[#ccc] px-20 mobile:px-7 bg-contrast w-full flex gap-12 flex-col py-20 overflow-hidden"
+  class="px-20 mobile:px-7 bg-primary w-full flex gap-12 flex-col py-20 overflow-hidden"
 >
   <h2
-    class="font-bold bg-gradient-to-b mobile:text-xl from-white to-white text-center bg-clip-text text-transparent text-3xl [text-shadow:0px_2px_2px_rgba(150,200,255,50%)]"
+    class="font-extrabold bg-gradient-to-b mobile:text-xl from-white to-white text-center bg-clip-text text-transparent text-3xl drop-shadow-[0_0_4px_black]"
   >
     Empresas que han confiado en nosotros
   </h2>
-  <section id="slider" class="bg-contrast  ">
+  <section id="slider" class="bg-primary">
     <section id="slide-track" class="">
       {CompanyList.map((el) => <Company name={el.name} image={el.image} />)}
     </section>
@@ -43,19 +43,6 @@ import Company from "./Items/Company.astro";
     width: calc(250px * 14);
   }
 
-
-  #slider::before::after {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 250%
-    );
-    content: "";
-    height: 250px;
-    position: absolute;
-    width: 200px;
-    z-index: 20;
-  }
   #slider::after {
     right: 0;
     top: 0;
