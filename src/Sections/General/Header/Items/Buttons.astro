@@ -12,20 +12,22 @@ const { selected } = Astro.props;
     "fullMobile:p-0 fullMobile:flex-col fullMobile:h-full fullMobile:justify-start fullMobile:justify-start fullMobile:mt-7 fullMobile:w-full",
   ]}
 >
-  <button
+  <a
+    href="/Experience"
     class:list={[
-      "px-2 text-lg max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      "px-2 text-lg text-center max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
       ,
       selected === 0
         ? " text-contrast bg-primary hover:bg-primary hover:text-contrast"
         : "bg-primary hover:bg-primary hover:text-contrast text-white text-primary",
       "fullMobile:w-full fullMobile:max-w-full fullMobile:text-start mobile:py-4",
       "fullMobile:bg-contrast/20 backdrop-brightness-75 fullMobile:rounded-none fullMobile:text-white fullMobile:drop-shadow",
-    ]}>Nuestros trabajos</button
+    ]}>Nuestros trabajos</a
   >
-  <button
+  <a
+    href="/"
     class:list={[
-      "px-2 text-lg max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      "px-2 text-lg text-center max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
       ,
       selected === 1
         ? " text-contrast bg-primary hover:bg-primary hover:text-contrast"
@@ -33,11 +35,12 @@ const { selected } = Astro.props;
       ,
       "fullMobile:w-full fullMobile:max-w-full fullMobile:text-start mobile:py-4",
       "fullMobile:bg-contrast/20 backdrop-brightness-75 fullMobile:rounded-none fullMobile:text-white fullMobile:drop-shadow",
-    ]}>Contactanos</button
+    ]}>Contactanos</a
   >
-  <button
+  <a
+    href="/"
     class:list={[
-      "px-2 text-lg max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
+      "px-2 text-lg text-center max-w-sm font-semibold rounded-xl w-[30%] py-1  drop-shadow-[0_7px_3px_#00000099] active:drop-shadow-[0_5px_6px_#00000099]",
       ,
       selected === 2
         ? " text-contrast bg-primary hover:bg-primary hover:text-contrast"
@@ -45,6 +48,6 @@ const { selected } = Astro.props;
       ,
       "fullMobile:w-full fullMobile:max-w-full fullMobile:text-start mobile:py-4",
       "fullMobile:bg-contrast/20 backdrop-brightness-75 fullMobile:rounded-none fullMobile:text-white fullMobile:drop-shadow",
-    ]}>Trabaja con nosotros</button
+    ]}>Trabaja con nosotros</a
   >
 </section>
