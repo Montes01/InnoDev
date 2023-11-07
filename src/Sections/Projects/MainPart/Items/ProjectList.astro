@@ -1,0 +1,14 @@
+---
+import { OurProjects } from "../../../../Consts/Consts";
+import ProjectCard from "../../../General/Cards/ProjectCard.astro";
+---
+
+<section
+  class="flex flex-wrap justify-center items-center gap-10 w-4/6 self-center"
+>
+  {
+    OurProjects.map((el) => (
+      <ProjectCard title={el.title} description={el.description} />
+    ))
+  }
+</section>

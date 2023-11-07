@@ -36,3 +36,8 @@ export type Question = {
   question: string;
   response: string;
 };
+
+export type Feature = {
+  title: string
+  popover:string
+}

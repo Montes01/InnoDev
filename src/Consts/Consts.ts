@@ -5,8 +5,55 @@ import type {
   PackageList,
   FeaturedProject,
   Question,
-  Package,
+  Feature,
 } from "./Types";
+
+//La lista de proyectos que saldra en la seccion llamada "Nuestros trabajos"
+//Project list that is going to appear on "Nuestros trabajos" section
+export const OurProjects: FeaturedProject[] = [
+  {
+    title: "xxxx",
+    description:
+      "lorem ipsum lsk afakj elaid nakdjmeopam sekab eka mn sdkajfb emn jha smbn",
+    image: null,
+    logo: null,
+  },
+  {
+    title: "xxxx",
+    description:
+      "lorem ipsum lsk afakj elaid nakdjmeopam sekab eka mn sdkajfb emn jha smbn",
+    image: null,
+    logo: null,
+  },
+  {
+    title: "xxxx",
+    description:
+      "lorem ipsum lsk afakj elaid nakdjmeopam sekab eka mn sdkajfb emn jha smbn",
+    image: null,
+    logo: null,
+  },
+  {
+    title: "xxxx",
+    description:
+      "lorem ipsum lsk afakj elaid nakdjmeopam sekab eka mn sdkajfb emn jha smbn",
+    image: null,
+    logo: null,
+  },
+  {
+    title: "xxxx",
+    description:
+      "lorem ipsum lsk afakj elaid nakdjmeopam sekab eka mn sdkajfb emn jha smbn",
+    image: null,
+    logo: null,
+  },
+  {
+    title: "xxxx",
+    description:
+      "lorem ipsum lsk afakj elaid nakdjmeopam sekab eka mn sdkajfb emn jha smbn",
+    image: null,
+    logo: null,
+  },
+];
 
 const packageList = {
   E_COMMERCE: [
@@ -333,4 +380,19 @@ export const Questions: Question[] = [
     response:
       "InnoDev es una empresa de desarrollo de software que ofrece aplicativos software.",
   },
+];
+
+export const Features: Feature[] = [
+  {
+    title: "Mantenibilidad",
+    popover: "Tu proyecto no morira jamas",
+  },
+  {
+    title: "Responsive",
+    popover: "Podras disfrutar tu pagina desde cualquier dispositivo",
+  },
+  {
+     title: "Escalabilidad",
+     popover: "Tu proyecto puede ser personalizado para tus necesidades",
+  }
 ];

@@ -1,0 +1,14 @@
+---
+    import Imagespart from "./Items/Imagespart.astro"
+    import {FeaturesInfo} from "./Items/FeaturesInfo.tsx"
+---
+<section class="flex flex-col bg-primary text-white w-full py-20 items-center">
+    <section class="flex flex-col items-center justify-center gap-5 w-full text-white">
+        <h2 class="text-2xl font-bold text-center">En la intersección de usabilidad y calidad, creamos software excepcional</h2>
+        <p class="text-lg text-center">¡Aquí te mostramos algunos de los principales!<p/>
+    </section>
+    <section class="flex w-full justify-center gap-12 py-20">
+        <Imagespart/>
+        <FeaturesInfo client:load/>
+    </section>
+</section>

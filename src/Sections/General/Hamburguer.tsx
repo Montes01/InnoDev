@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-
+import { MenuIcon } from "../../Consts/svgs";
 export const Hamburguer = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -21,13 +21,7 @@ export const Hamburguer = () => {
     <section class="mobile:flex mobileX:flex max-w-[2000px] fixed z-50 bg-contrast hidden w-full px-5">
       <div class="relative w-full h-[5vh] min-h-[50px] ">
         <button onClick={() => setIsOpen(!isOpen)} class="h-full invert">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              fill-rule="evenodd"
-              d="M5.75 5.25h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 0 1 0-1.5zm0 6h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 1 1 0-1.5zm0 6h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 1 1 0-1.5z"
-            ></path>
-          </svg>
+          <MenuIcon />
         </button>
         <a
           href="/"
